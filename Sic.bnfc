@@ -1,0 +1,45 @@
+
+EAdd.    Exp  ::= Exp  "+" Exp1;
+ESub.    Exp  ::= Exp  "-" Exp1;
+EMul.    Exp1 ::= Exp1 "*" Exp2;
+EDiv.    Exp1 ::= Exp1 "/" Exp2;
+EPow.    Exp2 ::= Exp2 "^" Exp3;
+
+EPrev.   Exp3 ::= "_";
+ENeg.    Exp3 ::= "-" Exp3;
+EVal.    Exp3 ::= Val;
+EValSuf. Exp3 ::= Val Suf;
+
+EC.      Exp3 ::= "c";
+EPi.     Exp3 ::= "pi";
+
+EMin.    Exp3 ::= "min";
+EHour.   Exp3 ::= "hour";
+EDay.    Exp3 ::= "day";
+EWeek.   Exp3 ::= "week";
+EMonth.  Exp3 ::= "month";
+EYear.   Exp3 ::= "year";
+
+coercions Exp 3;
+
+VInt. Val ::= Integer;
+VDub. Val ::= Double;
+
+S3P.   Suf ::= "k";
+S6P.   Suf ::= "M";
+S9P.   Suf ::= "G";
+S12P.  Suf ::= "T";
+S15P.  Suf ::= "P";
+S18P.  Suf ::= "E";
+S21P.  Suf ::= "Z";
+S24P.  Suf ::= "Y";
+S3N.   Suf ::= "m";
+S6N.   Suf ::= "u";
+S9N.   Suf ::= "n";
+S12N.  Suf ::= "p";
+S15N.  Suf ::= "f";
+S18N.  Suf ::= "a";
+S21N.  Suf ::= "z";
+S24N.  Suf ::= "y";
+
+comment "#";
